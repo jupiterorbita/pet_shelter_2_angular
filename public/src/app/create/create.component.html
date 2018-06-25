@@ -1,0 +1,15 @@
+<h3>create new pet</h3>
+{{ msg }}
+<form (submit)="create(myform)" #myform="ngForm">
+  name:<br>
+  <input type="text" ngModel name="name" id=""><br>
+  type:<br>
+  <input type="text" ngModel name="type"><br>
+  description: <br>
+  <textarea ngModel name="description"></textarea><br>
+  skills: <br>
+  skill 1: <input type="text" ngModel name="skill1"><br>
+  skill 2: <input type="text" ngModel name="skill2"><br>
+  skill 3: <input type="text" ngModel name="skill3"><br>
+  <input type="submit" value="create"> | <a [routerLink]="['/home']">cancel</a>
+</form>

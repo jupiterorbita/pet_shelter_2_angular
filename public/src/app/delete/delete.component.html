@@ -1,0 +1,20 @@
+<h3>UPDATE HERE </h3>
+actually is the delete component but whatever<br>
+
+<div *ngIf="pet">
+
+  {{ msg }}
+  {{ pet | json}}
+  <h4>Update for {{ pet['name'] }}</h4>
+  <form (submit)="update()">
+    name: <input type="text" [(ngModel)]="pet.name" name="name"><br>
+    type: <input type="text" [(ngModel)]="pet.type" name="type"><br>
+    description <br><textarea [(ngModel)]="pet.description" name="description"></textarea><br>
+    <u>skills</u> : <br>
+    skill 1 : <input type="text" [(ngModel)]="pet.skill1" name="skill1"><br>
+    skill 2 : <input type="text" [(ngModel)]="pet.skill2" name="skill2"><br>
+    skill 3 : <input type="text" [(ngModel)]="pet.skill3" name="skill3"><br>
+    <input type="submit" value="UPDATE">
+  </form> <a [routerLink]="['/home']">cancel</a><br><hr>
+
+</div>

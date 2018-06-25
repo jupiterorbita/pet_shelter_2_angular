@@ -1,0 +1,16 @@
+<a [routerLink]="['/create']">CREATE NEW</a>
+<br>
+<table *ngIf="pets_arr">
+  <thead>
+    <td> NAME </td>
+    <td> TYPE </td>
+    <td> ACTIONS </td>
+  </thead>
+  <tbody *ngFor="let i of pets_arr">
+    <tr>
+      <td>{{ i['name'] }}</td>
+      <td>{{ i.type }}</td>
+      <td> <a [routerLink]="['/pets/', i._id]"> DETAILS </a> - <a [routerLink]="['/pets/'+ i._id + '/update']"> UPDATE </a></td>
+    </tr>
+  </tbody>
+</table>

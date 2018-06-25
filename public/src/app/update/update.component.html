@@ -1,0 +1,17 @@
+<h3>VIEW DETAILS</h3>
+<hr>
+<div *ngIf="pet">
+    {{ pet | json}}
+    <hr>
+
+  <h4>name: {{ pet.name }}</h4>
+  type: {{ pet.type }}<br>
+  description: {{ pet.description }}<br>
+  skills: <br>
+  skill 1 => {{ pet.skill1 }}<br> 
+  skill 2 => {{ pet.skill2 }}<br>
+  skill 3 => {{ pet.skill3 }}<br>
+  <a href (click)="delete(pet._id)">ADOPT - DELTE</a>
+
+
+</div>
